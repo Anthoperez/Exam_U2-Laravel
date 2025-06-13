@@ -5,25 +5,38 @@
     <title>Examen_U2</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
-<body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="#">Alumnos Registrados</a>
-            <div class="collapse navbar-collapse">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                    <li class="nav-item">
-                        <a class="nav-link" href="{{ route('alumnos.index') }}">Listar Alumnos</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="{{ route('alumnos.create') }}">Crear Alumno</a>
-                    </li>
-                </ul>
-            </div>
+<body class="bg-light">
+
+    <!-- Encabezado principal -->
+    <header class="bg-primary text-white py-4 shadow-sm mb-4">
+        <div class="container text-center">
+            <h1 class="h3 mb-0">Sistema de Registro de Alumnos</h1>
+        </div>
+    </header>
+
+    <!-- Menú de navegación -->
+    <nav class="bg-white shadow-sm mb-4">
+        <div class="container">
+            <ul class="nav justify-content-center nav-pills py-2">
+                <li class="nav-item">
+                    <a class="nav-link text-dark fw-bold" href="#">Alumnos Registrados</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-dark fw-bold" href="{{ route('alumnos.create') }}">Registrar Alumno</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-dark fw-bold" href="{{ route('alumnos.index') }}">Listado de Alumnos</a>
+                </li>
+            </ul>
         </div>
     </nav>
-    <div class="container mt-4">
+
+    <!-- Contenido principal -->
+    <main class="container">
         @yield('content')
-    </div>
+    </main>
+
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
